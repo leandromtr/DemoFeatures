@@ -24,6 +24,15 @@ namespace RecordDemo
             Console.WriteLine($"Hash code of object B: { r1b.GetHashCode() }");
             Console.WriteLine($"Hash code of object C: { r1c.GetHashCode() }");
 
+            var (fn, ln) = r1a;
+            Console.WriteLine($"The value of fn is '{fn}' and the value of ln is '{ln}'");
+
+            Record1 r1d = r1a with
+            {
+                FirstName = "Ronaaaaaldo"
+            };
+            Console.WriteLine($"Ronaldo's record: {r1d}");
+
 
             Console.WriteLine();
             Console.WriteLine("************************************* ");
@@ -36,10 +45,36 @@ namespace RecordDemo
             Console.WriteLine($"Hash code of object A: { c1a.GetHashCode() }");
             Console.WriteLine($"Hash code of object B: { c1b.GetHashCode() }");
             Console.WriteLine($"Hash code of object C: { c1c.GetHashCode() }");
+
+
+            Console.WriteLine();
+            Console.WriteLine("************************************* ");
+            Record2 r2a = new(FirstName: "Leandro", LastName: "Reis", Adress:"123, Street");
+            Console.WriteLine($"r2a value {r2a}");
+            Console.WriteLine($"r2a fn: {r2a.FirstName} ln: { r2a.LastName}");
+            Console.WriteLine(r2a.SayTheAddress());
+
         }
 
         // A record is just a fancy read-only class
         public record Record1(string FirstName, string LastName);
+
+        public record Record2(string FirstName, string LastName, string Adress)
+        {
+            private string _firstName = FirstName;
+            public string FirstName
+            {
+                get { return _firstName.Substring(0,1); }
+                init { }
+            }
+
+            internal string Adress { get; init; } = Adress;   
+            public string FullName { get => $"{ FirstName} { LastName} "; }
+            public string SayTheAddress()
+            {
+                return $"Your Adress is {Adress}";
+            }
+        }
 
         public class Class1
         {
@@ -50,6 +85,12 @@ namespace RecordDemo
             {
                 this.FirstName = FirstName;
                 this.LastName = LastName;
+            }
+
+            public void Deconstruct (out string FirstName, out string LastName)
+            {
+                FirstName = this.FirstName;
+                LastName = this.LastName;
             }
         }
     }
