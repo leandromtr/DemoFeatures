@@ -51,7 +51,6 @@ namespace RecordDemo
             };
             Console.WriteLine($"Ronaldo's record: {r1d}");
 
-
             Console.WriteLine();
             Console.WriteLine("************************************* ");
             Console.WriteLine("Class Type");
@@ -63,7 +62,6 @@ namespace RecordDemo
             Console.WriteLine($"Hash code of object A: { c1a.GetHashCode() }");
             Console.WriteLine($"Hash code of object B: { c1b.GetHashCode() }");
             Console.WriteLine($"Hash code of object C: { c1c.GetHashCode() }");
-
 
             Console.WriteLine();
             Console.WriteLine("************************************* ");
@@ -85,11 +83,11 @@ namespace RecordDemo
             private string _firstName = FirstName;
             public string FirstName
             {
-                get { return _firstName.Substring(0,1); }
+                get { return _firstName.Substring(0, 1); }
                 init { }
             }
 
-            internal string Address { get; init; } = Address;   
+            internal string Address { get; init; } = Address;
             public string FullName { get => $"{ FirstName} { LastName} "; }
             public string SayTheAddress()
             {
@@ -108,11 +106,20 @@ namespace RecordDemo
                 this.LastName = LastName;
             }
 
-            public void Deconstruct (out string FirstName, out string LastName)
+            public void Deconstruct(out string FirstName, out string LastName)
             {
                 FirstName = this.FirstName;
                 LastName = this.LastName;
             }
+        }
+
+        // *********************************************************
+        //  DO NOT DO ANY OF THE BELOW - CAN CAUSE UNEXPECTED PROBLEMS
+        // *********************************************************
+        public record Record3  // No constructor so no desconstructor
+        {
+            public string FirstName { get; set; }      // The set makes this record mutable (BAD) 
+            public string LastName { get; set; }       // The set makes this record mutable (BAD) 
         }
     }
 }
