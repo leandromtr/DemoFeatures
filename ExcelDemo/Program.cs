@@ -12,12 +12,48 @@ namespace ExcelDemo
         static async Task Main(string[] args)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            var file = new FileInfo(@"C:\Demo\ExcelFile.xlsx");
+            
+            var path = @"C:\ExcelDemo\";
+            bool exists = System.IO.Directory.Exists(path);
+            if (!exists)
+                System.IO.Directory.CreateDirectory(path);
+
+            var file = new FileInfo(path + @"\ExcelFile.xlsx");
 
             var people = GetSetupData();
 
             await SaveExcelFile(people, file);
 
+            List<PersonModel> personFromExcel = await LoadExcelFile(file);
+
+            foreach(var person in personFromExcel)
+            {
+                Console.WriteLine($"{person.Id} {person.FistName} {person.LastName}");
+            }
+        }
+
+        private static async Task<List<PersonModel>> LoadExcelFile(FileInfo file)
+        {
+            List<PersonModel> output = new();
+
+            using var package = new ExcelPackage(file);
+            await package.LoadAsync(file);
+            var workSheet = package.Workbook.Worksheets[0];
+
+            int row = 3;
+            int col = 1;
+
+            while(string.IsNullOrWhiteSpace(workSheet.Cells[row,col].Value?.ToString()) == false)
+            {
+                PersonModel person = new();
+                person.Id = int.Parse(workSheet.Cells[row, col].Value.ToString());
+                person.FistName = workSheet.Cells[row, col +1].Value.ToString();
+                person.LastName = workSheet.Cells[row, col +2].Value.ToString();
+                output.Add(person);
+                row += 1;
+            }
+
+            return output;
         }
 
         private static async Task SaveExcelFile(List<PersonModel> people, FileInfo file)
