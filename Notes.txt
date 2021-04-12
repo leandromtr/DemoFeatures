@@ -1,2 +1,5 @@
 RecordDemo project
 - Gives an introduction about the use of Records based on https://www.youtube.com/watch?v=9Byvwa9yF-I&t=3739s
+
+ExcelDemo project
+- Gives an exemplo about how to create/ read a excel file using the nuget EPPlus, based based on https://www.youtube.com/watch?v=j3S3aI8nMeE
