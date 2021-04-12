@@ -1,6 +1,7 @@
 ﻿using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -26,8 +27,20 @@ namespace ExcelDemo
             using var package = new ExcelPackage(file);
             var workSheet = package.Workbook.Worksheets.Add("MainReport");
 
-            var range = workSheet.Cells["A1"].LoadFromCollection(people, true);
+            var range = workSheet.Cells["A2"].LoadFromCollection(people, true);
             range.AutoFitColumns();
+
+            // Format the Header
+            workSheet.Cells["A1"].Value = "Excel Report";
+            workSheet.Cells["A1:C1"].Merge = true;
+            workSheet.Column(1).Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+            workSheet.Row(1).Style.Font.Size = 24;
+            workSheet.Row(1).Style.Font.Color.SetColor(Color.Blue);
+
+            workSheet.Column(2).Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+            workSheet.Row(2).Style.Font.Bold = true;
+            
+            workSheet.Column(3).Width = 20;
 
             await package.SaveAsync();
         }
