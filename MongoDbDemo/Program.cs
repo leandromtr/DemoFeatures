@@ -1,6 +1,8 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver;
 using System;
+using System.Collections.Generic;
 
 namespace MongoDbDemo
 {
@@ -10,21 +12,40 @@ namespace MongoDbDemo
         {
             MongoCRUD db = new MongoCRUD("AdressBook");
 
-            db.InsertRecord("Users", new PersonModel { FirstName = "Leandro", LastName = "Reis" });
+            //db.InsertRecord("Users", new PersonModel { FirstName = "Teteus", LastName = "Santos" });
 
-            PersonModel person = new PersonModel
+            //PersonModel person = new PersonModel
+            //{
+            //    FirstName = "Lucas Souza",
+            //    LastName = "Reisddd",
+            //    PrimaryAddress = new AddressModel
+            //    {
+            //        StreetAddress = "123, Street",
+            //        City = "São Paulo",
+            //        State = "SP",
+            //        ZipCode = "188850",
+            //    }
+            //};
+            //db.InsertRecord("Users", person);
+
+
+
+            // Return
+            var recs = db.LoadResource<PersonModel>("Users");
+            foreach(var rec in recs)
             {
-                FirstName = "Lucas Souza",
-                LastName = "Reisddd",
-                PrimaryAddress = new AddressModel
+                Console.WriteLine($"{ rec.Id}: { rec.FirstName} { rec.LastName}");
+
+                if (rec.PrimaryAddress != null)
                 {
-                    StreetAddress = "123, Street",
-                    City = "São Paulo",
-                    State = "SP",
-                    ZipCode = "188850",
+                    Console.WriteLine(rec.PrimaryAddress.City);
                 }
-            };
-            db.InsertRecord("Users", person);
+                Console.WriteLine();
+            }
+
+            var oneRecord = db.LoadRecordById<PersonModel>("Users", new Guid("e90553db-1e84-46e8-b20e-03324b18bee9"));
+            Console.WriteLine($"{ oneRecord.Id}: { oneRecord.FirstName} { oneRecord.LastName}");
+
             Console.ReadLine();
         }
     }
@@ -66,5 +87,21 @@ namespace MongoDbDemo
             var collection = db.GetCollection<T>(table);
             collection.InsertOne(record);
         }
+
+        public List<T> LoadResource<T>(string table)
+        {
+            var collection = db.GetCollection<T>(table);
+            return collection.Find(new BsonDocument()).ToList();
+        }
+
+        public T LoadRecordById<T>(string table, Guid id)
+        {
+            var collection = db.GetCollection<T>(table);
+            var filter = Builders<T>.Filter.Eq("Id", id);
+
+            return collection.Find(filter).First();
+        }
+
+
     }
 }
