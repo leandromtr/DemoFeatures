@@ -11,7 +11,17 @@ namespace BetterConsoleDemo
     {
         static void Main(string[] args)
         {
+            var builder = new ConfigurationBuilder();
+            BuildConfig(builder);
 
+            // Logger Setup
+            Log.Logger = new LoggerConfiguration()
+                .ReadFrom.Configuration(builder.Build())
+                .Enrich.FromLogContext()
+                .WriteTo.Console()
+                .CreateLogger();
+
+            Log.Logger.Information("Application Starting");
         }
 
         static void BuildConfig(IConfigurationBuilder builder)
