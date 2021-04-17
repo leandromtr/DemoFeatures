@@ -22,7 +22,7 @@ namespace BetterConsoleDemo
             {
                 for (int i = 0; i < _config.GetValue<int>("LoopTimes"); i++)
                 {
-                    _log.LogInformation("Run number { runNumber }", i);
+                    _log.LogInformation("Run number {runNumber}", i);
                 }
             }
         }
