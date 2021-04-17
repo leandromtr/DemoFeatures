@@ -1,8 +1,11 @@
+BetterConsoleDemo
+-Console project with the resources of Dependency Injection, Logging and Settings, based on  https://www.youtube.com/watch?v=GAOCe-2nXqc
+
 RecordDemo project
 -Introduction about the use of Records based on https://www.youtube.com/watch?v=9Byvwa9yF-I&t=3739s
 
 ExcelDemo project
--Exemplo about how to create/ read a excel file using the nuget EPPlus, based based on https://www.youtube.com/watch?v=j3S3aI8nMeE
+-Exemplo about how to create/ read a excel file using the nuget EPPlus, based on https://www.youtube.com/watch?v=j3S3aI8nMeE
 
 MongoDbDemo project
 -Introduction about how to CRUD data from MongoDb, based on https://www.youtube.com/watch?v=69WBy4MHYUw
