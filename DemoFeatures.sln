@@ -16,6 +16,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDbDemo", "MongoDbDemo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterConsoleDemo", "BetterConsoleDemo\BetterConsoleDemo.csproj", "{965CB595-630A-42B8-B474-43BA36495314}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientDemo", "HttpClientDemo\HttpClientDemo.csproj", "{CE87BA3E-D451-4952-9C1D-C89226A22C67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{965CB595-630A-42B8-B474-43BA36495314}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{965CB595-630A-42B8-B474-43BA36495314}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{965CB595-630A-42B8-B474-43BA36495314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE87BA3E-D451-4952-9C1D-C89226A22C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE87BA3E-D451-4952-9C1D-C89226A22C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE87BA3E-D451-4952-9C1D-C89226A22C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE87BA3E-D451-4952-9C1D-C89226A22C67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
