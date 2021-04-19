@@ -7,6 +7,10 @@
 {
     <div class="h2">@errorString</div>
 }
+else if (forecast is null)
+{
+    <div class="h4">Loading...</div>
+}
 else
 {
     <table class="table table-striped">
@@ -20,14 +24,16 @@ else
         </thead>
         <tbody>
             @foreach (var weather in forecast.Consolidated_weather)
-                {
-                    <td>weather.applicable_data</td>
-                    <td>weather.weather_state_name</td>
-                    <td>weather.min_temp</td>
-                    <td>weather.max_temp</td>
-                }
+            {
+                <tr>
+                    <td>@weather.applicable_date</td>
+                    <td>@weather.weather_state_name</td>
+                    <td>@weather.min_temp</td>
+                    <td>@weather.max_temp</td>
+                </tr>
+            }
         </tbody>
-    </table>     
+    </table>
     <div class="h2">@errorString</div>
 }
 
@@ -39,7 +45,9 @@ else
     protected override async Task OnInitializedAsync()
     {
         var request = new HttpRequestMessage(HttpMethod.Get,
-            "https://www.metaweather.com/api/location/455827/");
+            "https://www.metaweather.com/api/location/2471217/");
+
+        //455827
 
         var client = _clientFactory.CreateClient();
         HttpResponseMessage response = await client.SendAsync(request);
