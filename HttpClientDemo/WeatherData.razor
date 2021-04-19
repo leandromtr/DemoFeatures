@@ -3,10 +3,38 @@
 @inject IHttpClientFactory _clientFactory
 
 <h3>WeatherData</h3>
+@if (string.IsNullOrWhiteSpace(errorString) == false)
+{
+    <div class="h2">@errorString</div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Date</th>
+                <th>Weather State</th>
+                <th>Low</th>
+                <th>High</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var weather in forecast.Consolidated_weather)
+                {
+                    <td>weather.applicable_data</td>
+                    <td>weather.weather_state_name</td>
+                    <td>weather.min_temp</td>
+                    <td>weather.max_temp</td>
+                }
+        </tbody>
+    </table>     
+    <div class="h2">@errorString</div>
+}
+
 
 @code {
-        WeatherForecastModels forecast;
-        string errorString;
+    WeatherForecastModels forecast;
+    string errorString;
 
     protected override async Task OnInitializedAsync()
     {
