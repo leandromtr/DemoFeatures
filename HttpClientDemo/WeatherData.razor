@@ -44,22 +44,32 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        var request = new HttpRequestMessage(HttpMethod.Get,
-            "https://www.metaweather.com/api/location/2471217/");
+        //var request = new HttpRequestMessage(HttpMethod.Get,
+        //    "https://www.metaweather.com/api/location/455827/");
 
-        //455827
+        //var client = _clientFactory.CreateClient();
+        //HttpResponseMessage response = await client.SendAsync(request);
 
+        //if (response.IsSuccessStatusCode)
+        //{
+        //    forecast = await response.Content.ReadFromJsonAsync<WeatherForecastModels>();
+        //    errorString = null;
+        //}
+        //else
+        //{
+        //    errorString = $"There was an error getting our forecast: { response.ReasonPhrase }";
+        //}
+        
         var client = _clientFactory.CreateClient();
-        HttpResponseMessage response = await client.SendAsync(request);
 
-        if (response.IsSuccessStatusCode)
+        try
         {
-            forecast = await response.Content.ReadFromJsonAsync<WeatherForecastModels>();
+            forecast = await client.GetFromJsonAsync<WeatherForecastModels>("https://www.metaweather.com/api/location/455827/");
             errorString = null;
         }
-        else
+        catch (Exception ex)
         {
-            errorString = $"There was an error getting our forecast: { response.ReasonPhrase }";
+            errorString = $"There was an error getting our forecast: { ex.Message }";
         }
     }
 }
