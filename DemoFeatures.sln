@@ -14,9 +14,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelDemo", "ExcelDemo\Exce
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDbDemo", "MongoDbDemo\MongoDbDemo.csproj", "{3ADDB4BD-0CB1-4825-9195-1D207811A5EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterConsoleDemo", "BetterConsoleDemo\BetterConsoleDemo.csproj", "{965CB595-630A-42B8-B474-43BA36495314}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetterConsoleDemo", "BetterConsoleDemo\BetterConsoleDemo.csproj", "{965CB595-630A-42B8-B474-43BA36495314}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientDemo", "HttpClientDemo\HttpClientDemo.csproj", "{CE87BA3E-D451-4952-9C1D-C89226A22C67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpClientDemo", "HttpClientDemo\HttpClientDemo.csproj", "{CE87BA3E-D451-4952-9C1D-C89226A22C67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFunctionDemo", "AzureFunctionDemo\AzureFunctionDemo.csproj", "{1DE547BA-DE85-4EDA-8DBF-A317A3D6D7BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{CE87BA3E-D451-4952-9C1D-C89226A22C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE87BA3E-D451-4952-9C1D-C89226A22C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE87BA3E-D451-4952-9C1D-C89226A22C67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DE547BA-DE85-4EDA-8DBF-A317A3D6D7BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DE547BA-DE85-4EDA-8DBF-A317A3D6D7BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DE547BA-DE85-4EDA-8DBF-A317A3D6D7BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DE547BA-DE85-4EDA-8DBF-A317A3D6D7BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
