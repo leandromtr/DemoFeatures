@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MVCDemo.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MVCDemo
+namespace MVCDemo.Data
 {
     public class MVCDemoDbContext : DbContext
     {
@@ -12,5 +13,7 @@ namespace MVCDemo
         {
 
         }
+
+        public DbSet<Category> Category { get; set; }
     }
 }
