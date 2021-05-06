@@ -22,5 +22,11 @@ namespace MVCDemo.Controllers
             IEnumerable<Category> objList = _db.Category;
             return View(objList);
         }
+
+
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
