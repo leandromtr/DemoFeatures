@@ -28,5 +28,13 @@ namespace MVCDemo.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Create(Category obj)
+        {
+            _db.Category.Add(obj);
+            _db.SaveChanges();            
+            return RedirectToAction("Index");
+        }
     }
 }
