@@ -3,14 +3,16 @@ using MVCDemo.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MVCDemo.Migrations
 {
     [DbContext(typeof(MVCDemoDbContext))]
-    partial class MVCDemoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210510080333_addApplicationType")]
+    partial class addApplicationType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
