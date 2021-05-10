@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace MVCDemo.Models
 {
-    public class ApplicationType
+    public class Category
     {
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
+        [DisplayName("Display Order")]
+        public int DisplayOrder { get; set; }
     }
 }
