@@ -1,3 +1,4 @@
+using Hangfire;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +27,10 @@ namespace HangfireDemo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHangfire(x => x.UseSqlServerStorage(
+                @"Server=(localdb)\MSSQLLocalDB;Database=MVCDemo;Trusted_Connection=True;MultipleActiveResultSets=True"));
+
+            services.AddHangfireServer();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -45,7 +50,7 @@ namespace HangfireDemo
             }
 
             app.UseHttpsRedirection();
-
+            app.UseHangfireDashboard();
             app.UseRouting();
 
             app.UseAuthorization();
