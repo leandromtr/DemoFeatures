@@ -28,7 +28,7 @@ namespace HangfireDemo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHangfire(x => x.UseSqlServerStorage(
-                @"Server=(localdb)\MSSQLLocalDB;Database=MVCDemo;Trusted_Connection=True;MultipleActiveResultSets=True"));
+                @"Server=(localdb)\MSSQLLocalDB;Database=HangfireDemo;Trusted_Connection=True;MultipleActiveResultSets=True"));
 
             services.AddHangfireServer();
 
