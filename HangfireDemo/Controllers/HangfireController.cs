@@ -32,6 +32,16 @@ namespace HangfireDemo.Controllers
             return Ok($"Job Id: {jobId} Discount email will be send in {timeInSecounds} second(s)");
         }
 
+
+        // Recurring Job
+        [HttpPost]
+        [Route("[action]")]
+        public IActionResult DataBaseUpdate()
+        {
+            RecurringJob.AddOrUpdate(() => Console.WriteLine("Database Update"), Cron.Minutely);
+            return Ok($"Database check job initiated!");
+        }
+
         public void SendWelcomeEmail(string text)
         {
             Console.WriteLine(text);
