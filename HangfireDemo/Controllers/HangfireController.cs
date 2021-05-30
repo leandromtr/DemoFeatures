@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Hangfire;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -8,15 +9,20 @@ using System.Threading.Tasks;
 namespace HangfireDemo.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class HangfireController : ControllerBase
     {
-
-        [HttpGet]
-        public IActionResult Get()
+        [HttpPost]
+        [Route("[action]")]
+        public IActionResult Welcome()
         {
-            return Ok("Hello from hangfire webApi!");
+            var jobId = BackgroundJob.Enqueue(() => SendWelcomeEmail("Welcome to this project"));
+            return Ok($"Job Id: {jobId} Welcome email sent");
         }
 
+        public void SendWelcomeEmail(string text)
+        {
+            Console.WriteLine(text);
+        }
     }
 }
