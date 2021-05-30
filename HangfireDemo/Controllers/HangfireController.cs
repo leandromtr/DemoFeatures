@@ -42,6 +42,19 @@ namespace HangfireDemo.Controllers
             return Ok($"Database check job initiated!");
         }
 
+
+        // Continous Job
+        [HttpPost]
+        [Route("[action]")]
+        public IActionResult Confirm()
+        {
+            int timeInSecounds = 10;
+            var parentJobId = BackgroundJob.Schedule(() => Console.WriteLine("You asked to be unsubscribed"), TimeSpan.FromSeconds(timeInSecounds));
+            BackgroundJob.ContinueJobWith(parentJobId,() => Console.WriteLine("You were unsubscribed!"));
+            return Ok("Confirmation Job created");
+        }
+
+
         public void SendWelcomeEmail(string text)
         {
             Console.WriteLine(text);
