@@ -4,6 +4,10 @@ BetterConsoleDemo
 ExcelDemo
 -Exemplo about how to create/ read a excel file using the nuget EPPlus, based on https://www.youtube.com/watch?v=j3S3aI8nMeE
 
+HangFireDemo
+-Project that shows the 4 free types of Hangfire, FireAndForget, Delay, Recurring and Continous job.
+-It was based on https://www.youtube.com/watch?v=Rw0tM7EAWr8&list=PL2Q8rFbm-4rtH-5o6mzOFA0tombRfr4Be&index=1
+
 HttpClientDemo
 -Conect to a client http, using Blazor, based on https://www.youtube.com/watch?v=cwgck1k0YKU
 
