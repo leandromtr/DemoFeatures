@@ -10,6 +10,7 @@ namespace StringDemo
             Console.WriteLine("Hello World!");
             StringConversion();
             StringAsArray();
+            EscapeString();
         }
 
         private static void StringConversion()
@@ -42,5 +43,17 @@ namespace StringDemo
             }
         }
 
+        private static void EscapeString()
+        {
+            string results;
+            results = "This is my \"test\" solution.";
+            Console.WriteLine(results);
+
+            results = "C:\\Demo\\Test.txt";
+            Console.WriteLine(results);
+
+            results = @"C:\Demo\Test.txt";
+            Console.WriteLine(results);
+        }
     }
 }
