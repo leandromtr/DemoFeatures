@@ -9,6 +9,7 @@ namespace StringDemo
         {
             Console.WriteLine("Hello World!");
             StringConversion();
+            StringAsArray();
         }
 
         private static void StringConversion()
@@ -29,6 +30,17 @@ namespace StringDemo
 
             result = englishTextInfo.ToTitleCase(testString);
             Console.WriteLine(result);
-        }         
+        }
+
+        private static void StringAsArray()
+        {
+            string testString = "LeandroReis";
+
+            for(int i = 0; i < testString.Length; i++)
+            {
+                Console.WriteLine(testString[i]);
+            }
+        }
+
     }
 }
