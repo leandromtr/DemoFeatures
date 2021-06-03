@@ -11,6 +11,7 @@ namespace StringDemo
             StringConversion();
             StringAsArray();
             EscapeString();
+            AppendingStrings();
         }
 
         private static void StringConversion()
@@ -37,7 +38,7 @@ namespace StringDemo
         {
             string testString = "LeandroReis";
 
-            for(int i = 0; i < testString.Length; i++)
+            for (int i = 0; i < testString.Length; i++)
             {
                 Console.WriteLine(testString[i]);
             }
@@ -53,6 +54,22 @@ namespace StringDemo
             Console.WriteLine(results);
 
             results = @"C:\Demo\Test.txt";
+            Console.WriteLine(results);
+        }
+
+        private static void AppendingStrings()
+        {
+            string firstName = "Leandro";
+            string lastName = "Reis";
+            string results;
+
+            results = lastName + ", my name is " + firstName  + " " + lastName;
+            Console.WriteLine(results);
+
+            results = string.Format("{1}, my name is {0} {1}", firstName, lastName);
+            Console.WriteLine(results);
+
+            results = $"{lastName}, my name is {firstName}  {lastName}";
             Console.WriteLine(results);
         }
     }
