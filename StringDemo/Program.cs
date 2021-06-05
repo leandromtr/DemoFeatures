@@ -12,6 +12,7 @@ namespace StringDemo
             StringAsArray();
             EscapeString();
             AppendingStrings();
+            InterpolationAndLiteral();
         }
 
         private static void StringConversion()
@@ -72,5 +73,12 @@ namespace StringDemo
             results = $"{lastName}, my name is {firstName}  {lastName}";
             Console.WriteLine(results);
         }
+
+        private static void InterpolationAndLiteral()
+        {
+            string testString = "Leandro Reis";
+            string results = $@"C:\Demo\{testString}\{"\""}Test{"\""}.txt";
+        }
+
     }
 }
