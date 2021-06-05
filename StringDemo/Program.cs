@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Globalization;
+using System.Text;
 
 namespace StringDemo
 {
@@ -13,6 +15,7 @@ namespace StringDemo
             EscapeString();
             AppendingStrings();
             InterpolationAndLiteral();
+            StringBuilderDemo();
         }
 
         private static void StringConversion()
@@ -80,5 +83,31 @@ namespace StringDemo
             string results = $@"C:\Demo\{testString}\{"\""}Test{"\""}.txt";
         }
 
+        private static void StringBuilderDemo()
+        {
+            Stopwatch regularStopwatch = new Stopwatch();
+            regularStopwatch.Start();
+
+            string test = "";
+            for (int i = 0; i < 10000; i++)
+            {
+                test += i;
+            }
+            regularStopwatch.Stop();
+            Console.WriteLine($"Regular Stopwatch: {regularStopwatch.ElapsedMilliseconds} ms");
+
+
+            Stopwatch builderStopwatch = new Stopwatch();
+            builderStopwatch.Start();
+
+            StringBuilder sb = new();
+
+            for (int i = 0; i < 10000; i++)
+            {
+                sb.Append(i);
+            }
+            builderStopwatch.Stop();
+            Console.WriteLine($"StringBuilder Stopwatch: {builderStopwatch.ElapsedMilliseconds} ms");
+        }
     }
 }
