@@ -16,6 +16,7 @@ namespace StringDemo
             AppendingStrings();
             InterpolationAndLiteral();
             StringBuilderDemo();
+            WorkingWithArrays();
         }
 
         private static void StringConversion()
@@ -67,7 +68,7 @@ namespace StringDemo
             string lastName = "Reis";
             string results;
 
-            results = lastName + ", my name is " + firstName  + " " + lastName;
+            results = lastName + ", my name is " + firstName + " " + lastName;
             Console.WriteLine(results);
 
             results = string.Format("{1}, my name is {0} {1}", firstName, lastName);
@@ -108,6 +109,23 @@ namespace StringDemo
             }
             builderStopwatch.Stop();
             Console.WriteLine($"StringBuilder Stopwatch: {builderStopwatch.ElapsedMilliseconds} ms");
+        }
+
+        private static void WorkingWithArrays()
+        {
+            int[] ages = new int[] { 6, 7, 8, 9, 10 };
+            string results;
+
+            results = String.Concat(ages);
+            Console.WriteLine(results);
+
+            results = String.Join("," , ages);
+            Console.WriteLine(results);
+
+            string testString = "Leo,Line,Le,Tetesus,Leka,";
+            string[] resultArray = testString.Split(',');
+
+            Array.ForEach(resultArray, x => Console.WriteLine(x));
         }
     }
 }
