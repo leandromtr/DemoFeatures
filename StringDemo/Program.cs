@@ -169,6 +169,30 @@ namespace StringDemo
 
             resultsBoolean = testString.EndsWith("workss out.");
             Console.WriteLine($"Ends with \"works out.\" : {resultsBoolean}");
+
+            resultsBoolean = testString.Contains("search");
+            Console.WriteLine($"Contains \"search\" : {resultsBoolean}");
+
+            resultsBoolean = testString.Contains("searchh");
+            Console.WriteLine($"Contains \"search\" : {resultsBoolean}");
+
+            resultsInt = testString.IndexOf("test");
+            Console.WriteLine($"Index of \"test\" : {resultsInt}");
+
+            resultsInt = testString.IndexOf("test", 11);
+            Console.WriteLine($"Index of \"test\" after character 11: {resultsInt}");
+
+            resultsInt = testString.IndexOf("test", 49);
+            Console.WriteLine($"Index of \"test\" after character 48: {resultsInt}");
+
+            resultsInt = testString.LastIndexOf("test");
+            Console.WriteLine($"Index of \"test\" : {resultsInt}");
+
+            resultsInt = testString.LastIndexOf("test", 48);
+            Console.WriteLine($"Index of \"test\" before character 48: {resultsInt}");
+
+            resultsInt = testString.LastIndexOf("test", 10);
+            Console.WriteLine($"Index of \"test\" before character 10: {resultsInt}");
         }
     }
 }
