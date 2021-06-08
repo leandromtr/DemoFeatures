@@ -17,6 +17,7 @@ namespace StringDemo
             InterpolationAndLiteral();
             StringBuilderDemo();
             WorkingWithArrays();
+            PadAndTrim();
         }
 
         private static void StringConversion()
@@ -126,6 +127,28 @@ namespace StringDemo
             string[] resultArray = testString.Split(',');
 
             Array.ForEach(resultArray, x => Console.WriteLine(x));
+        }
+
+        private static void PadAndTrim()
+        {
+            string testString = "    Vai Corinthians!! ";
+            string results;
+
+            results = testString.TrimStart();
+            Console.WriteLine($"'{results}'");
+
+            results = testString.TrimEnd();
+            Console.WriteLine($"'{results}'");
+
+            results = testString.Trim();
+            Console.WriteLine($"'{results}'");
+
+            testString = "1.15";
+            results = testString.PadLeft(10,'0');
+            Console.WriteLine(results);
+
+            results = testString.PadRight(10, '0');
+            Console.WriteLine(results);
         }
     }
 }
