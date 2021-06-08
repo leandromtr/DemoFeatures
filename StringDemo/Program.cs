@@ -18,6 +18,7 @@ namespace StringDemo
             StringBuilderDemo();
             WorkingWithArrays();
             PadAndTrim();
+            SearchingString();
         }
 
         private static void StringConversion()
@@ -120,7 +121,7 @@ namespace StringDemo
             results = String.Concat(ages);
             Console.WriteLine(results);
 
-            results = String.Join("," , ages);
+            results = String.Join(",", ages);
             Console.WriteLine(results);
 
             string testString = "Leo,Line,Le,Tetesus,Leka,";
@@ -144,11 +145,30 @@ namespace StringDemo
             Console.WriteLine($"'{results}'");
 
             testString = "1.15";
-            results = testString.PadLeft(10,'0');
+            results = testString.PadLeft(10, '0');
             Console.WriteLine(results);
 
             results = testString.PadRight(10, '0');
             Console.WriteLine(results);
+        }
+
+        private static void SearchingString()
+        {
+            string testString = "This is a test of the search. Let's see how its testing works out.";
+            bool resultsBoolean;
+            int resultsInt;
+
+            resultsBoolean = testString.StartsWith("This is ");
+            Console.WriteLine($"Starts with \"This is\" : {resultsBoolean}");
+
+            resultsBoolean = testString.StartsWith("Thhis is ");
+            Console.WriteLine($"Starts with \"This is\" : {resultsBoolean}");
+
+            resultsBoolean = testString.EndsWith("works out.");
+            Console.WriteLine($"Ends with \"works out.\" : {resultsBoolean}");
+
+            resultsBoolean = testString.EndsWith("workss out.");
+            Console.WriteLine($"Ends with \"works out.\" : {resultsBoolean}");
         }
     }
 }
