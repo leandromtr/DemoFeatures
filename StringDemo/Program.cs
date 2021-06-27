@@ -21,6 +21,7 @@ namespace StringDemo
             SearchingString();
             OrderingString();
             TestingEquality();
+            GettingASubstring();
         }
 
         private static void StringConversion()
@@ -292,5 +293,18 @@ namespace StringDemo
             }
             Console.WriteLine();
         }
+
+        private static void GettingASubstring()
+        {
+            string testString = "This is a test of substring. Let's see how its testing works out.";
+            string results;
+
+            results = testString.Substring(5);
+            Console.WriteLine(results);
+
+            results = testString.Substring(5, 4);
+            Console.WriteLine(results);
+        }
+
     }
 }
