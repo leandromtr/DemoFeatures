@@ -20,6 +20,7 @@ namespace StringDemo
             PadAndTrim();
             SearchingString();
             OrderingString();
+            TestingEquality();
         }
 
         private static void StringConversion()
@@ -246,6 +247,50 @@ namespace StringDemo
                     Console.WriteLine($"Compare {testA} is the same as {testB}");
                     break;
             }
+        }
+
+        private static void TestingEquality()
+        {
+            EqualityHelper("Mary", "Bob");
+            EqualityHelper("Mary", null);
+            EqualityHelper("Adam", "Bob");
+            EqualityHelper("Bob", "bob");
+        }
+
+        private static void EqualityHelper(string? testA, string? testB)
+        {
+            bool resultsBoolean;
+            resultsBoolean = String.Equals(testA, testB);
+
+            if (resultsBoolean)
+            {
+                Console.WriteLine($"Equals: '{testA ?? "null"}' equals '{testB ?? "null"}'");
+            }
+            else
+            {
+                Console.WriteLine($"Equals: '{testA ?? "null"}' does not equal '{testB ?? "null"}'");
+            }
+
+            resultsBoolean = String.Equals(testA, testB, StringComparison.OrdinalIgnoreCase);
+            if (resultsBoolean)
+            {
+                Console.WriteLine($"Equals (ignore case): '{testA ?? "null"}' equals '{testB ?? "null"}'");
+            }
+            else
+            {
+                Console.WriteLine($"Equals (ignore case): '{testA ?? "null"}' does not equal '{testB ?? "null"}'");
+            }
+
+            resultsBoolean = testA == testB;
+            if (resultsBoolean)
+            {
+                Console.WriteLine($"==: '{testA ?? "null"}' equals '{testB ?? "null"}'");
+            }
+            else
+            {
+                Console.WriteLine($"==: '{testA ?? "null"}' does not equal '{testB ?? "null"}'");
+            }
+            Console.WriteLine();
         }
     }
 }
