@@ -22,6 +22,7 @@ namespace StringDemo
             OrderingString();
             TestingEquality();
             GettingASubstring();
+            ReplacingText();
         }
 
         private static void StringConversion()
@@ -306,5 +307,19 @@ namespace StringDemo
             Console.WriteLine(results);
         }
 
+        private static void ReplacingText()
+        {
+            string testString = "This is a test of substring. Let's see how its testing Works out for test.";
+            string results;
+
+            results = testString.Replace(" test ", " trial ");
+            Console.WriteLine(results);
+
+            results = testString.Replace("works", "makes");
+            Console.WriteLine(results);
+
+            results = testString.Replace("works", "makes", StringComparison.InvariantCultureIgnoreCase);
+            Console.WriteLine(results);
+        }
     }
 }
