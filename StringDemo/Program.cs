@@ -27,6 +27,7 @@ namespace StringDemo
             RemovingText();
         }
 
+
         private static void StringConversion()
         {
             string testString = "This is the FBI calling!";
@@ -59,6 +60,10 @@ namespace StringDemo
 
         private static void EscapeString()
         {
+            Console.WriteLine(string.Empty);
+            Console.WriteLine(string.Empty);
+            Console.WriteLine("------- EscapeString");
+
             string results;
             results = "This is my \"test\" solution.";
             Console.WriteLine(results);
@@ -67,6 +72,21 @@ namespace StringDemo
             Console.WriteLine(results);
 
             results = @"C:\Demo\Test.txt";
+            Console.WriteLine(results);
+
+            results = "\'Single Quote\'";
+            Console.WriteLine(results);
+
+            results = "\"Double Quote\"";
+            Console.WriteLine(results);
+
+            results = "\t Horizontal Tab";
+            Console.WriteLine(results);
+            
+            results = "New \n Line";
+            Console.WriteLine(results);
+        
+            results = "\\ Backslash";
             Console.WriteLine(results);
         }
 
