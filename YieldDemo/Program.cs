@@ -13,7 +13,7 @@ namespace YieldDemo
             var people = DataAccess.GetPeople();
             people = DataAccessYield.GetPeople();
 
-            foreach(var p in people)
+            foreach (var p in people)
             {
                 Console.WriteLine($"Read {p.FirstName} {p.LastName}");
             }
@@ -27,7 +27,13 @@ namespace YieldDemo
             }
 
             var primeNumbers = Generators.GetPrimeNumber().Take(10);
-            foreach(var prime in primeNumbers)
+
+            foreach (var prime in primeNumbers)
+            {
+                Console.WriteLine(prime);
+            }
+
+            foreach (var prime in primeNumbers)
             {
                 Console.WriteLine(prime);
             }
@@ -40,6 +46,40 @@ namespace YieldDemo
             {
                 Console.WriteLine(prime);
             }
+
+
+
+
+            var primeNumbers2 = Generators.GetPrimeNumber();
+
+            var interator = primeNumbers2.GetEnumerator();
+            for (int i = 0; i < 10; i++)
+            {
+                if (interator.MoveNext())
+                {
+                    Console.WriteLine(interator.Current);
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            Console.WriteLine("Waiting for user input");
+            Console.ReadLine();
+
+            for (int i = 0; i < 15; i++)
+            {
+                if (interator.MoveNext())
+                {
+                    Console.WriteLine(interator.Current);
+                }
+                else
+                {
+                    break;
+                }
+            }
+
 
             Console.WriteLine("End of the App");
         }
