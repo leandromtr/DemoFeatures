@@ -2,7 +2,7 @@ BetterConsoleDemo
 -Console project with the resources of Dependency Injection, Logging and Settings, based on  https://www.youtube.com/watch?v=GAOCe-2nXqc
 
 ExcelDemo
--Exemplo about how to create/ read a excel file using the nuget EPPlus, based on https://www.youtube.com/watch?v=j3S3aI8nMeE
+-Exemple about how to create/ read a excel file using the nuget EPPlus, based on https://www.youtube.com/watch?v=j3S3aI8nMeE
 
 HangFireDemo
 -Project that shows the 4 free types of Hangfire, FireAndForget, Delay, Recurring and Continous job.
@@ -18,7 +18,10 @@ MVCDemo
 -Introduction of MVC, based on https://www.youtube.com/watch?v=Pi46L7UYP8I
 
 RecordDemo
--Introduction about the use of Records based on https://www.youtube.com/watch?v=9Byvwa9yF-I&t=3739s
+-Introduction about the use of Records based on https://www.youtube.com/watch?v=9Byvwa9yF-I
 
 StringDemo 
--Exemplos of String manipulation based on https://www.youtube.com/watch?v=ioi__WRETk4
+-Exemples of String manipulation based on https://www.youtube.com/watch?v=ioi__WRETk4
+
+YieldDemo 
+-Exemples of Yield Return based on https://www.youtube.com/watch?v=AAz8q6dOCYk
