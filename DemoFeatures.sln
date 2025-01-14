@@ -24,6 +24,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LibraryDemo", "LibraryDemo"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThrowLibrary", "ThrowLibrary\ThrowLibrary.csproj", "{5CE80AEA-B83A-4725-B7E6-705DE8081941}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmarker", "Benchmarker\Benchmarker.csproj", "{86FBB8ED-7FDD-4447-BCD6-3D1DD50A754C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{5CE80AEA-B83A-4725-B7E6-705DE8081941}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CE80AEA-B83A-4725-B7E6-705DE8081941}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CE80AEA-B83A-4725-B7E6-705DE8081941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86FBB8ED-7FDD-4447-BCD6-3D1DD50A754C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86FBB8ED-7FDD-4447-BCD6-3D1DD50A754C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86FBB8ED-7FDD-4447-BCD6-3D1DD50A754C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86FBB8ED-7FDD-4447-BCD6-3D1DD50A754C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
