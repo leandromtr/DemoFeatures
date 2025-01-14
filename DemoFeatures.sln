@@ -18,6 +18,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HangfireDemo", "HangfireDem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFunctionDemo", "AzureFunctionDemo\AzureFunctionDemo.csproj", "{E0826014-C5B6-4CA9-B015-02A023FE60D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BogusLibrary", "BogusLibrary\BogusLibrary.csproj", "{698EC575-068A-475D-9A70-E764B83D1144}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{E0826014-C5B6-4CA9-B015-02A023FE60D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0826014-C5B6-4CA9-B015-02A023FE60D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0826014-C5B6-4CA9-B015-02A023FE60D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{698EC575-068A-475D-9A70-E764B83D1144}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{698EC575-068A-475D-9A70-E764B83D1144}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{698EC575-068A-475D-9A70-E764B83D1144}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{698EC575-068A-475D-9A70-E764B83D1144}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
