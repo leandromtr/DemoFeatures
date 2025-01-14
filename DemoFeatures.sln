@@ -20,6 +20,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFunctionDemo", "AzureF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BogusLibrary", "BogusLibrary\BogusLibrary.csproj", "{698EC575-068A-475D-9A70-E764B83D1144}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LibraryDemo", "LibraryDemo", "{04D08215-FD62-447E-B630-F1BB7C86E812}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThrowLibrary", "ThrowLibrary\ThrowLibrary.csproj", "{5CE80AEA-B83A-4725-B7E6-705DE8081941}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,9 +54,18 @@ Global
 		{698EC575-068A-475D-9A70-E764B83D1144}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{698EC575-068A-475D-9A70-E764B83D1144}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{698EC575-068A-475D-9A70-E764B83D1144}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CE80AEA-B83A-4725-B7E6-705DE8081941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CE80AEA-B83A-4725-B7E6-705DE8081941}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CE80AEA-B83A-4725-B7E6-705DE8081941}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CE80AEA-B83A-4725-B7E6-705DE8081941}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{63CDDA86-30B4-4DDF-97E5-46B6DFCF9DC1} = {04D08215-FD62-447E-B630-F1BB7C86E812}
+		{698EC575-068A-475D-9A70-E764B83D1144} = {04D08215-FD62-447E-B630-F1BB7C86E812}
+		{5CE80AEA-B83A-4725-B7E6-705DE8081941} = {04D08215-FD62-447E-B630-F1BB7C86E812}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FEA7BBA3-A2AA-4D4F-9113-CE8CF24F9283}
