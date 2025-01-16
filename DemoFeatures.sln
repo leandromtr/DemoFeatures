@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThrowLibrary", "ThrowLibrar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmarker", "Benchmarker\Benchmarker.csproj", "{86FBB8ED-7FDD-4447-BCD6-3D1DD50A754C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoFactorAuthentication.API", "TwoFactorAuthentication.API\TwoFactorAuthentication.API.csproj", "{3BC846D3-EB69-48E0-BDE5-10E36DFE41D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +66,10 @@ Global
 		{86FBB8ED-7FDD-4447-BCD6-3D1DD50A754C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86FBB8ED-7FDD-4447-BCD6-3D1DD50A754C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86FBB8ED-7FDD-4447-BCD6-3D1DD50A754C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BC846D3-EB69-48E0-BDE5-10E36DFE41D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BC846D3-EB69-48E0-BDE5-10E36DFE41D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BC846D3-EB69-48E0-BDE5-10E36DFE41D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BC846D3-EB69-48E0-BDE5-10E36DFE41D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
