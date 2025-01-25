@@ -27,6 +27,10 @@ Project that shows the 4 free types of Hangfire, FireAndForget, Delay, Recurring
 [Asp.Net Core: Background Processing](https://www.youtube.com/watch?v=Rw0tM7EAWr8&list=PL2Q8rFbm-4rtH-5o6mzOFA0tombRfr4Be&index=1)  
 `Hangfire`
 
+- **MathExpression**  
+Project to create, store, and get math expression made by the user, using values or sensor data stored at Data base.
+`Microsoft.EntityFrameworkCore.SqlServer` `Microsoft.EntityFrameworkCore.Tools` `Microsoft.Extensions.Configuration.Json` `Ncalc`
+
 - **MongoDbDemo**  
 Introduction about how to CRUD data from MongoDb  
 [Intro to MongoDB with C# - Learn what NoSQL is, why it is different than SQL and how to use it in C#
