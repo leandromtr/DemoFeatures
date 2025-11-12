@@ -11,6 +11,9 @@ HangFireDemo
 HttpClientDemo
 -Conect to a client http, using Blazor, based on https://www.youtube.com/watch?v=cwgck1k0YKU
 
+Microsoft ML
+-Introduction about Microsoft ML, that in this example is used to detects an anomalous value based on https://www.youtube.com/watch?v=yOgreCMzaUA
+
 MongoDbDemo
 -Introduction about how to CRUD data from MongoDb, based on https://www.youtube.com/watch?v=69WBy4MHYUw
 
