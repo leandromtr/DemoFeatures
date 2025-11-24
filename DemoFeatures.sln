@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecordDemo", "RecordDemo\RecordDemo.csproj", "{D2FA2A02-F348-452F-B9E5-C0D7A700B7D4}"
 EndProject
@@ -27,6 +27,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YieldDemo", "YieldDemo\YieldDemo.csproj", "{C9260BBF-6208-4711-851D-B22DBEDBE5E3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftMLDemo", "MicrosoftMLDemo\MicrosoftMLDemo.csproj", "{CF2FF1BC-E0E2-4893-AEEC-4722A9AA89D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventingDemo", "EventingDemo\EventingDemo.csproj", "{3DD593E6-BBFD-4649-AAE4-279B1AEB696B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +76,10 @@ Global
 		{CF2FF1BC-E0E2-4893-AEEC-4722A9AA89D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF2FF1BC-E0E2-4893-AEEC-4722A9AA89D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF2FF1BC-E0E2-4893-AEEC-4722A9AA89D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DD593E6-BBFD-4649-AAE4-279B1AEB696B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DD593E6-BBFD-4649-AAE4-279B1AEB696B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DD593E6-BBFD-4649-AAE4-279B1AEB696B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DD593E6-BBFD-4649-AAE4-279B1AEB696B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
