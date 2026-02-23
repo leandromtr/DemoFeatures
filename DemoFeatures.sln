@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftMLDemo", "Microsof
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventingDemo", "EventingDemo\EventingDemo.csproj", "{3DD593E6-BBFD-4649-AAE4-279B1AEB696B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundDemo", "BackgroundDemo\BackgroundDemo.csproj", "{54FCA3F9-DE10-4DDF-8EEB-35C1F1B6A0EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,6 +82,10 @@ Global
 		{3DD593E6-BBFD-4649-AAE4-279B1AEB696B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DD593E6-BBFD-4649-AAE4-279B1AEB696B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DD593E6-BBFD-4649-AAE4-279B1AEB696B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54FCA3F9-DE10-4DDF-8EEB-35C1F1B6A0EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54FCA3F9-DE10-4DDF-8EEB-35C1F1B6A0EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54FCA3F9-DE10-4DDF-8EEB-35C1F1B6A0EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54FCA3F9-DE10-4DDF-8EEB-35C1F1B6A0EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
