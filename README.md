@@ -1,0 +1,34 @@
+# DemoFeatures
+A solution that groups together a series of other projects, each with a different feature based on different tutorials or personal code.
+
+## Projects
+- **BackgroungDemo**
+-API Project with an example of custom background job, based on [https://www.youtube.com/watch?v=GAOCe-2nXqc](https://www.youtube.com/watch?v=ip3Z4ZcAgA8)
+
+- **ExcelDemo**
+-Exemple about how to create/ read a excel file using the nuget EPPlus, based on https://www.youtube.com/watch?v=j3S3aI8nMeE
+
+- **HangFireDemo**
+-Project that shows the 4 free types of Hangfire, FireAndForget, Delay, Recurring and Continous job.
+-It was based on https://www.youtube.com/watch?v=Rw0tM7EAWr8&list=PL2Q8rFbm-4rtH-5o6mzOFA0tombRfr4Be&index=1
+
+- **HttpClientDemo**
+-Conect to a client http, using Blazor, based on https://www.youtube.com/watch?v=cwgck1k0YKU
+
+- **Microsoft ML**
+-Introduction about Microsoft ML, that in this example is used to detects an anomalous value based on https://www.youtube.com/watch?v=yOgreCMzaUA
+
+- **MongoDbDemo**
+-Introduction about how to CRUD data from MongoDb, based on https://www.youtube.com/watch?v=69WBy4MHYUw
+
+- **MVCDemo**
+-Introduction of MVC, based on https://www.youtube.com/watch?v=Pi46L7UYP8I
+
+- **RecordDemo**
+-Introduction about the use of Records based on https://www.youtube.com/watch?v=9Byvwa9yF-I
+
+- **StringDemo** 
+-Exemples of String manipulation based on https://www.youtube.com/watch?v=ioi__WRETk4
+
+- **YieldDemo** 
+-Exemples of Yield Return based on https://www.youtube.com/watch?v=AAz8q6dOCYk
