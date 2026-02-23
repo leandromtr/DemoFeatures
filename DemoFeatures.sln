@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecordDemo", "RecordDemo\RecordDemo.csproj", "{D2FA2A02-F348-452F-B9E5-C0D7A700B7D4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A1EB25F5-1A6B-4FFA-B856-5882FF358D12}"
-	ProjectSection(SolutionItems) = preProject
-		Notes.txt = Notes.txt
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelDemo", "ExcelDemo\ExcelDemo.csproj", "{983AF9AA-502B-4D77-931B-9BFA64E3E7A2}"
 EndProject
